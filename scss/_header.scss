@@ -1,0 +1,33 @@
+header {
+    grid-row: 2/3;
+    background: url('../img/billboard.jpg') no-repeat center center/cover;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+    .motto {
+        grid-column: 2;
+        align-self: center;
+        padding: 0 2rem;
+    }
+
+    h1 {
+        margin: 0;
+        display: inline-block;
+        width: 52rem;
+        font-size: 4.5rem;
+        font-weight: 100;
+        background-color: rgba(255, 255, 255, 0.651);
+    }
+
+    h2 {
+        margin: .5rem 0 0 0;
+        display: inline-block;
+        width: 58rem;
+        font-size: 4.5rem;
+        font-weight: 100;
+        background-color:  rgba(255, 255, 255, 0.651);
+    }
+    
+}

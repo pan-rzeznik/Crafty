@@ -1,0 +1,52 @@
+.features {
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+}
+
+.features-section {
+    grid-row: 3/4;
+    max-width: $main-width;
+    margin: 5rem auto;
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+    grid-gap: 2rem;
+   
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 3rem 0;
+
+    img {
+        grid-column: 1/2; 
+        grid-row: 1/2;
+        width: 6rem;
+        height: 6rem;
+    }
+    &__text {
+
+        color: rgb(58, 58, 58);
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+
+        p {
+            color: rgb(94, 94, 94);
+            font-size: 1.4rem;
+            line-height: 1.5;
+            padding-right: 6rem; 
+        }
+    
+        a {
+           text-decoration: none;
+           font-size: 1.3rem;
+           color: currentColor;
+        }
+    }
+   
+
+}
