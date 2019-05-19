@@ -9,7 +9,7 @@
     margin: 5rem auto;
     padding: 0 3rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
     grid-gap: 2rem;
    
 }
@@ -45,6 +45,7 @@
            text-decoration: none;
            font-size: 1.3rem;
            color: currentColor;
+           font-weight: 700;
         }
     }
    

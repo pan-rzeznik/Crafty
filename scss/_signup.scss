@@ -1,0 +1,62 @@
+.signup {
+    grid-row: 6;
+    border-bottom: 1px solid rgba(73, 73, 73, 0.158);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 7rem;
+
+        &::after {
+            content: '';
+            width: 1px;
+            height: 8rem;
+            background-color: rgba(73, 73, 73, 0.158);
+            display: inline-block; 
+        }
+        
+        h2 {
+            font-size: 3.5rem;
+            color: rgba(12, 12, 12, 0.651); 
+        }
+
+        p {
+            max-width: 104rem;
+            text-align: center;
+            padding: 0 5rem;
+            margin: 0 0 4rem 0;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: rgb(109, 109, 109);
+        }
+
+        .btn {
+            color: #fff;
+            background-color: rgba(35, 134, 79, 0.719);
+            padding: 1.5rem 4rem;
+            font-size: 1.9rem;
+            text-decoration: none;
+            transition: 1s background-color;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: rgba(35, 134, 79, 0.897);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+   .signup {
+       &__container {
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+       }
+   } 
+}
+
+
+

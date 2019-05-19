@@ -98,6 +98,59 @@ header h2 {
   background-color: rgba(255, 255, 255, 0.651);
 }
 
+@media (max-width: 65rem) {
+  header .motto {
+    grid-column: 1/-1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header h1 {
+    width: 40rem;
+    font-size: 3.5rem;
+  }
+  header h2 {
+    width: 48rem;
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 57rem) {
+  header {
+    background: url("../img/billboard.jpg") no-repeat left center/cover;
+  }
+  header .motto {
+    grid-column: 1/-1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header h1 {
+    width: 28.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  header h2 {
+    width: 32.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
 .features {
   width: 100%;
   background-color: #f1f1f1;
@@ -112,8 +165,8 @@ header h2 {
   padding: 0 3rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(29rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+  -ms-grid-columns: (minmax(29rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
   grid-gap: 2rem;
 }
 
@@ -156,6 +209,7 @@ header h2 {
   text-decoration: none;
   font-size: 1.3rem;
   color: currentColor;
+  font-weight: 700;
 }
 
 .testimonials {
@@ -180,6 +234,24 @@ header h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.testimonials .container .circles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.testimonials .container .circles .circle {
+  margin: 0 .5rem 2rem .5rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgba(73, 73, 73, 0.158);
+  border-radius: 5rem;
+}
+
+.testimonials .container .circles .circleActive {
+  background-color: rgba(73, 73, 73, 0.747);
 }
 
 .testimonials .container::before {
@@ -221,6 +293,8 @@ header h2 {
 
 .testimonials .container h4 {
   font-size: 1.6rem;
+  -webkit-transition: 1s all;
+  transition: 1s all;
 }
 
 .testimonials .container p {
@@ -230,6 +304,178 @@ header h2 {
   font-size: 1.6rem;
   line-height: 1.5;
   color: #6d6d6d;
+}
+
+.info {
+  -ms-grid-row: 5;
+  grid-row: 5;
+}
+
+.info__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.info__container .photo {
+  background: url("../img/info_img.jpg") no-repeat center top/cover;
+}
+
+.info__container .text {
+  padding: 8rem 5rem;
+  background-color: #2c2c2c;
+}
+
+.info__container .text h2 {
+  font-size: 3rem;
+  color: #fff;
+  margin: 0 5vw 0 0;
+}
+
+.info__container .text p {
+  margin: 3rem 0;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding-right: 20rem;
+}
+
+.info__container .text a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1150px) {
+  .info__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
+  .info__container .photo {
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .info__container .text {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .info__container .text p {
+    padding-right: 7rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .info__container {
+    -ms-grid-rows: 1fr 1.5fr;
+        grid-template-rows: 1fr 1.5fr;
+  }
+  .info__container .text h2 {
+    font-size: 2.5rem;
+  }
+  .info__container .text p {
+    padding-right: 0;
+  }
+}
+
+.signup {
+  -ms-grid-row: 6;
+  grid-row: 6;
+  border-bottom: 1px solid rgba(73, 73, 73, 0.158);
+}
+
+.signup__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 7rem;
+}
+
+.signup__container::after {
+  content: '';
+  width: 1px;
+  height: 8rem;
+  background-color: rgba(73, 73, 73, 0.158);
+  display: inline-block;
+}
+
+.signup__container h2 {
+  font-size: 3.5rem;
+  color: rgba(12, 12, 12, 0.651);
+}
+
+.signup__container p {
+  max-width: 104rem;
+  text-align: center;
+  padding: 0 5rem;
+  margin: 0 0 4rem 0;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #6d6d6d;
+}
+
+.signup__container .btn {
+  color: #fff;
+  background-color: rgba(35, 134, 79, 0.719);
+  padding: 1.5rem 4rem;
+  font-size: 1.9rem;
+  text-decoration: none;
+  -webkit-transition: 1s background-color;
+  transition: 1s background-color;
+  text-transform: uppercase;
+}
+
+.signup__container .btn:hover {
+  background-color: rgba(35, 134, 79, 0.897);
+}
+
+@media (max-width: 768px) {
+  .signup__container h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
+.footer {
+  -ms-grid-row: 7;
+  grid-row: 7;
+  background-color: #f1f1f1;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 7rem 0;
+}
+
+.footer__container img {
+  margin-bottom: 2rem;
+}
+
+.footer__container p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: center;
 }
 
 html {
@@ -247,8 +493,8 @@ body {
 .page-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 8rem 60vh min-content (min-content)[3];
-      grid-template-rows: 8rem 60vh -webkit-min-content repeat(3, -webkit-min-content);
-      grid-template-rows: 8rem 60vh min-content repeat(3, min-content);
+  -ms-grid-rows: 8rem 60vh min-content min-content min-content (min-content)[2];
+      grid-template-rows: 8rem 60vh -webkit-min-content -webkit-min-content -webkit-min-content repeat(2, -webkit-min-content);
+      grid-template-rows: 8rem 60vh min-content min-content min-content repeat(2, min-content);
 }
 /*# sourceMappingURL=main.css.map */
