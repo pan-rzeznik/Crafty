@@ -19,7 +19,12 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 .page-container {
     display: grid;
-    grid-template-rows: 8rem 60vh min-content min-content min-content repeat(2, min-content) 
+    position: relative;
+    grid-template-rows:  60vh repeat(6, min-content) 
 }

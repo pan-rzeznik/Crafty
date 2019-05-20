@@ -1,5 +1,4 @@
 .info {
-    grid-row: 5;
 
     &__container {
         display: grid;
@@ -11,25 +10,25 @@
 
         .text {
             padding: 8rem 5rem;
-            background-color: rgb(44, 44, 44);
+            background-color: $dark-grey;
 
             h2 {
                 font-size: 3rem;
-                color: #fff;
+                color: $white;
                 margin: 0 5vw 0 0;
 
             }
 
             p {
                 margin: 3rem 0;
-                color: #fff;
+                color: $white;
                 font-size: 1.5rem;
                 line-height: 1.5;
                 padding-right: 20rem;
             }
 
             a {
-                color: #fff;
+                color: $white;
                 text-decoration: none;
                 font-size: 1.6rem;
                 font-weight: 700;

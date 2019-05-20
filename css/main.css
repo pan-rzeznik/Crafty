@@ -1,15 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap");
 .navbar {
-  grid-column: 1/-1;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
   background-color: #2c2c2c;
+  opacity: 0.9;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr (minmax(min-content, 12rem))[10] 1fr;
       grid-template-columns: 1fr repeat(10, minmax(-webkit-min-content, 12rem)) 1fr;
       grid-template-columns: 1fr repeat(10, minmax(min-content, 12rem)) 1fr;
+  position: fixed;
+  width: 100%;
+  height: 8rem;
+  z-index: 1000;
 }
 
 .navbar__wrapper {
@@ -22,6 +23,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .navbar__wrapper .navbar__logo {
@@ -48,22 +50,76 @@
 }
 
 .navbar__wrapper .navbar__list__item:hover a {
-  color: green;
+  color: #23864f;
 }
 
 .navbar__wrapper .navbar__list__item a {
   color: #fff;
-  text-decoration: none;
   font-size: 1.4rem;
   font-weight: 400;
   -webkit-transition: .5s color;
   transition: .5s color;
 }
 
+.navbar__wrapper label {
+  font-size: 2rem;
+  color: #f1f1f1;
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  z-index: 1000;
+  right: 1rem;
+  padding: 1rem 2rem;
+  display: none;
+}
+
+.navbar__wrapper input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+@media (max-width: 768px) {
+  .navbar__wrapper {
+    position: relative;
+  }
+  .navbar__wrapper .navbar__list {
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #2c2c2c;
+    opacity: 0;
+    -webkit-transform: translateY(-20rem);
+            transform: translateY(-20rem);
+    -webkit-transition: 1s all;
+    transition: 1s all;
+  }
+  .navbar__wrapper .navbar__list__item {
+    display: block;
+    padding: 2.5rem 2rem;
+  }
+  .navbar__wrapper label {
+    display: inline-block;
+  }
+  .navbar__wrapper #toggle:checked ~ .navbar__list {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 header {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
   background: url("../img/billboard.jpg") no-repeat center center/cover;
   display: -ms-grid;
   display: grid;
@@ -86,7 +142,8 @@ header h1 {
   width: 52rem;
   font-size: 4.5rem;
   font-weight: 100;
-  background-color: rgba(255, 255, 255, 0.651);
+  background-color: #f1f1f1;
+  opacity: 0.7;
 }
 
 header h2 {
@@ -95,10 +152,11 @@ header h2 {
   width: 58rem;
   font-size: 4.5rem;
   font-weight: 100;
-  background-color: rgba(255, 255, 255, 0.651);
+  background-color: #f1f1f1;
+  opacity: 0.7;
 }
 
-@media (max-width: 65rem) {
+@media (max-width: 650px) {
   header .motto {
     grid-column: 1/-1;
     display: -webkit-box;
@@ -122,7 +180,7 @@ header h2 {
   }
 }
 
-@media (max-width: 57rem) {
+@media (max-width: 570px) {
   header {
     background: url("../img/billboard.jpg") no-repeat left center/cover;
   }
@@ -152,21 +210,17 @@ header h2 {
 }
 
 .features {
-  width: 100%;
   background-color: #f1f1f1;
 }
 
 .features-section {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3/4;
   max-width: 120rem;
   margin: 5rem auto;
   padding: 0 3rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(29rem, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
+  -ms-grid-columns: (minmax(29rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
   grid-gap: 2rem;
 }
 
@@ -213,8 +267,6 @@ header h2 {
 }
 
 .testimonials {
-  -ms-grid-row: 4;
-  grid-row: 4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,12 +355,7 @@ header h2 {
   padding: 0 5rem;
   font-size: 1.6rem;
   line-height: 1.5;
-  color: #6d6d6d;
-}
-
-.info {
-  -ms-grid-row: 5;
-  grid-row: 5;
+  color: #5e5e5e;
 }
 
 .info__container {
@@ -384,8 +431,6 @@ header h2 {
 }
 
 .signup {
-  -ms-grid-row: 6;
-  grid-row: 6;
   border-bottom: 1px solid rgba(73, 73, 73, 0.158);
 }
 
@@ -401,6 +446,7 @@ header h2 {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 7rem;
+  padding: 0 2rem;
 }
 
 .signup__container::after {
@@ -413,7 +459,8 @@ header h2 {
 
 .signup__container h2 {
   font-size: 3.5rem;
-  color: rgba(12, 12, 12, 0.651);
+  color: #3a3a3a;
+  opacity: 0.8;
 }
 
 .signup__container p {
@@ -423,22 +470,22 @@ header h2 {
   margin: 0 0 4rem 0;
   font-size: 1.6rem;
   line-height: 1.5;
-  color: #6d6d6d;
+  color: #5e5e5e;
 }
 
 .signup__container .btn {
   color: #fff;
-  background-color: rgba(35, 134, 79, 0.719);
+  background-color: #23864f;
+  opacity: 0.8;
   padding: 1.5rem 4rem;
   font-size: 1.9rem;
-  text-decoration: none;
-  -webkit-transition: 1s background-color;
-  transition: 1s background-color;
+  -webkit-transition: 1s opacity;
+  transition: 1s opacity;
   text-transform: uppercase;
 }
 
 .signup__container .btn:hover {
-  background-color: rgba(35, 134, 79, 0.897);
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
@@ -466,6 +513,7 @@ header h2 {
       -ms-flex-align: center;
           align-items: center;
   margin: 7rem 0;
+  padding: 0 2rem;
 }
 
 .footer__container img {
@@ -490,11 +538,16 @@ body {
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 .page-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 8rem 60vh min-content min-content min-content (min-content)[2];
-      grid-template-rows: 8rem 60vh -webkit-min-content -webkit-min-content -webkit-min-content repeat(2, -webkit-min-content);
-      grid-template-rows: 8rem 60vh min-content min-content min-content repeat(2, min-content);
+  position: relative;
+  -ms-grid-rows: 60vh (min-content)[6];
+      grid-template-rows: 60vh repeat(6, -webkit-min-content);
+      grid-template-rows: 60vh repeat(6, min-content);
 }
 /*# sourceMappingURL=main.css.map */

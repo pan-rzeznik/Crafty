@@ -1,5 +1,5 @@
 header {
-    grid-row: 2/3;
+    
     background: url('../img/billboard.jpg') no-repeat center center/cover;
     
     display: grid;
@@ -18,7 +18,8 @@ header {
         width: 52rem;
         font-size: 4.5rem;
         font-weight: 100;
-        background-color: rgba(255, 255, 255, 0.651);
+        background-color: $light-grey;
+        opacity: 0.7;
     }
 
     h2 {
@@ -27,12 +28,13 @@ header {
         width: 58rem;
         font-size: 4.5rem;
         font-weight: 100;
-        background-color:  rgba(255, 255, 255, 0.651);
+        background-color:  $light-grey;
+        opacity: 0.7;
     }
     
 }
 
-@media (max-width: 65rem) {
+@media (max-width: 650px) {
     header {
         .motto {
             grid-column: 1/-1;
@@ -52,7 +54,7 @@ header {
     }
 }
 
-@media (max-width: 57rem) {
+@media (max-width: 570px) {
     header {
         background: url('../img/billboard.jpg') no-repeat left center/cover;
         .motto {

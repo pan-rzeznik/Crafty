@@ -1,5 +1,5 @@
 .signup {
-    grid-row: 6;
+
     border-bottom: 1px solid rgba(73, 73, 73, 0.158);
 
     &__container {
@@ -7,6 +7,7 @@
         flex-direction: column;
         align-items: center;
         margin-top: 7rem;
+        padding: 0 2rem;
 
         &::after {
             content: '';
@@ -18,7 +19,8 @@
         
         h2 {
             font-size: 3.5rem;
-            color: rgba(12, 12, 12, 0.651); 
+            color: $text-grey-dark;
+            opacity: 0.8; 
         }
 
         p {
@@ -28,20 +30,20 @@
             margin: 0 0 4rem 0;
             font-size: 1.6rem;
             line-height: 1.5;
-            color: rgb(109, 109, 109);
+            color: $text-grey-light;
         }
 
         .btn {
-            color: #fff;
-            background-color: rgba(35, 134, 79, 0.719);
+            color: $white;
+            background-color: $btn-green;
+            opacity: 0.8;
             padding: 1.5rem 4rem;
             font-size: 1.9rem;
-            text-decoration: none;
-            transition: 1s background-color;
+            transition: 1s opacity;
             text-transform: uppercase;
 
             &:hover {
-                background-color: rgba(35, 134, 79, 0.897);
+                opacity: 0.9;
             }
         }
     }

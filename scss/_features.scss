@@ -1,17 +1,15 @@
 .features {
-    width: 100%;
-    background-color: rgb(241, 241, 241);
+    background-color: $light-grey;
 }
 
 .features-section {
-    grid-row: 3/4;
     max-width: $main-width;
     margin: 5rem auto;
     padding: 0 3rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
     grid-gap: 2rem;
-   
+    
 }
 
 .feature {
@@ -27,7 +25,7 @@
     }
     &__text {
 
-        color: rgb(58, 58, 58);
+        color: $text-grey-dark;
         
         h2 {
             font-size: 1.8rem;
@@ -35,7 +33,7 @@
         }
 
         p {
-            color: rgb(94, 94, 94);
+            color: $text-grey-light;
             font-size: 1.4rem;
             line-height: 1.5;
             padding-right: 6rem; 
@@ -51,3 +49,4 @@
    
 
 }
+
