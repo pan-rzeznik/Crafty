@@ -28,3 +28,9 @@ a {
     position: relative;
     grid-template-rows:  60vh repeat(6, min-content) 
 }
+
+.active {
+    a {
+        color: $btn-green;
+    }
+}

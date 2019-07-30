@@ -100,10 +100,12 @@
             align-items: center;
     background-color: #2c2c2c;
     opacity: 0;
-    -webkit-transform: translateY(-20rem);
-            transform: translateY(-20rem);
-    -webkit-transition: 1s all;
-    transition: 1s all;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transition: .5s all;
+    transition: .5s all;
   }
   .navbar__wrapper .navbar__list__item {
     display: block;
@@ -113,14 +115,15 @@
     display: inline-block;
   }
   .navbar__wrapper #toggle:checked ~ .navbar__list {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
     opacity: 1;
   }
 }
 
 header {
   background: url("../img/billboard.jpg") no-repeat center center/cover;
+  overflow-x: hidden;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -157,6 +160,9 @@ header h2 {
 }
 
 @media (max-width: 650px) {
+  header {
+    background: url("../img/billboard-small.jpg") no-repeat left center/cover;
+  }
   header .motto {
     grid-column: 1/-1;
     display: -webkit-box;
@@ -181,9 +187,6 @@ header h2 {
 }
 
 @media (max-width: 570px) {
-  header {
-    background: url("../img/billboard.jpg") no-repeat left center/cover;
-  }
   header .motto {
     grid-column: 1/-1;
     display: -webkit-box;
@@ -230,6 +233,8 @@ header h2 {
   -ms-grid-columns: 1fr 3fr;
       grid-template-columns: 1fr 3fr;
   padding: 3rem 0;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
 }
 
 .feature img {
@@ -255,7 +260,7 @@ header h2 {
 .feature__text p {
   color: #5e5e5e;
   font-size: 1.4rem;
-  line-height: 1.5;
+  line-height: 1.7;
   padding-right: 6rem;
 }
 
@@ -264,6 +269,22 @@ header h2 {
   font-size: 1.3rem;
   color: currentColor;
   font-weight: 700;
+  -webkit-transition: .5s color;
+  transition: .5s color;
+}
+
+.feature__text a:hover {
+  color: #23864f;
+}
+
+@media (max-width: 500px) {
+  .feature__text p {
+    color: #5e5e5e;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    padding-right: 6rem;
+    padding-right: 10px;
+  }
 }
 
 .testimonials {
@@ -324,6 +345,16 @@ header h2 {
 
 .testimonials .container__text {
   margin: 5rem 0;
+  color: #3a3a3a;
+}
+
+.testimonials .container .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.testimonials .container .slider .slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -334,7 +365,6 @@ header h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #3a3a3a;
 }
 
 .testimonials .container h2 {
@@ -393,6 +423,12 @@ header h2 {
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 700;
+  -webkit-transition: .5s color;
+  transition: .5s color;
+}
+
+.info__container .text a:hover {
+  color: #23864f;
 }
 
 @media (max-width: 1150px) {
@@ -414,6 +450,12 @@ header h2 {
   }
   .info__container .text p {
     padding-right: 7rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .info__container .photo {
+    background: url("../img/info_img-small.jpg") no-repeat center top/cover;
   }
 }
 
@@ -549,5 +591,9 @@ a {
   -ms-grid-rows: 60vh (min-content)[6];
       grid-template-rows: 60vh repeat(6, -webkit-min-content);
       grid-template-rows: 60vh repeat(6, min-content);
+}
+
+.active a {
+  color: #23864f;
 }
 /*# sourceMappingURL=main.css.map */

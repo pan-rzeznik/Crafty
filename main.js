@@ -1,35 +1,48 @@
-let testimonialContent = document.querySelector('.content');
-let testimonialsAuthor = document.querySelector('.author');
-let circle = document.querySelectorAll('.circle');
+import jump from './node_modules/jump.js/dist/jump.module.js'
 
-const testimonials = [{
-    content: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu pariatur, Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    author: "John Doe - UX Designer"
-},
-{
-    content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et fugiat molestiae ut vitae labore vel deserunt necessitatibus ipsam velit dolor! Amet consectetur adipisicing elit. Et fugiat molestiae ut vitae labore vel deserunt necessitatibus",
-    author: "John David - Developer"
-},
-{
-    content: "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu pariatur.",
-    author: "Jane Eva - SEO Expert"
-},
+const links = document.querySelectorAll('.navbar__list__item');
+const hamburgerToggler = document.getElementById('toggle');
 
-]
 
-function showTestimonials(n){
-    testimonialContent.textContent = testimonials[n].content;
-    testimonialsAuthor.textContent = testimonials[n].author;
-}
+window.addEventListener('DOMContentLoaded', ()=>{
+    const motto = document.querySelector('.motto');
+    const navbar = document.querySelector('.navbar');
+    const features = document.querySelectorAll('.feature');
 
-let ar = Array.from(circle);
+    TweenMax.from(motto, 1, {x:100, opacity:0})
+    TweenMax.from(navbar, 1, {y:-100, opacity:0, delay: .5})
 
-ar.forEach(element => {
+    features.forEach(feature => {
+        TweenMax.from(feature, 1, {scaleY:0, opacity:0, delay: 1})
+    });
+})
 
+let isScrolling = false;
+
+document.addEventListener('scroll', () => { 
+    isScrolling = true;
+    setTimeout(() => {
+        isScrolling = false;
+    }, 1000);
+})
+
+    
+links.forEach(element => {
     element.addEventListener('click', () => {
-        showTestimonials(ar.indexOf(element))
-        element.classList.toggle("circleActive");
+        if(window.innerWidth <= 768) {
+            hamburgerToggler.click();
+            jump(`.${element.getAttribute('target')}`, { offset: -80});
+        }
+        else {
+            if(isScrolling) {
+                element.preventDefault(); 
+                jump(`.${element.getAttribute('target')}`, { offset: -80});
+            }
+            else
+            jump(`.${element.getAttribute('target')}`, { offset: -80});
+        }
+        
     })
-
-  
 });
+
+

@@ -13,37 +13,37 @@
     <div class="page-container">
         <nav class="navbar">
             <div class="navbar__wrapper">
-                <div class="navbar__logo">
+                <div class="navbar__logo" target="header">
                     <a href="#">
                         <img src="./img/logo.png" alt="Navbar logo" class="logo__img">
                     </a>
                 </div>
                 <input type="checkbox" id="toggle">
-                    <label for="toggle">&#9776</label>
+                <label for="toggle">&#9776</label>
                 <ul class="navbar__list">
-                    <li class="navbar__list__item"><a href="#">Our Story</a></li>
-                    <li class="navbar__list__item"><a href="#">Price</a></li>
-                    <li class="navbar__list__item"><a href="#">Journal</a></li>
-                    <li class="navbar__list__item"><a href="#">Contact</a></li>
+                    <li class="navbar__list__item" target="header"><a href="#">Home</a></li>
+                    <li class="navbar__list__item" target="features"><a href="#">Faetures</a></li>
+                    <li class="navbar__list__item" target="testimonials"><a href="#">Testimonials</a></li>
+                    <li class="navbar__list__item" target="info"><a href="#">Contact</a></li>
                 </ul>
-                     
-                    
-               
+
+
+
             </div>
         </nav>
-        <header>
+        <header class="header section">
             <div class="motto">
                 <h1>EXCEPTEU ROCCAECAT</h1>
                 <h2>CULPA OFFICIA DESERUNT</h2>
             </div>
 
         </header>
-        <section class="features">
+        <section class="features section">
             <div class="features-section">
                 <div class="feature">
                     <img src="./img/icon1.png" alt="Icon 1">
                     <div class="feature__text">
-                        <h2>Excepteur sint.</h2>
+                        <h2>Wall painting.</h2>
                         <p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
                         <a href="#">More details &rarr;</a>
                     </div>
@@ -51,72 +51,86 @@
                 <div class="feature">
                     <img src="./img/icon2.png" alt="Icon 2">
                     <div class="feature__text">
-                        <h2>Excepteur sint.</h2>
-                        <p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
+                        <h2>Screen fixing.</h2>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur.</p>
                         <a href="#">More details &rarr;</a>
                     </div>
                 </div>
                 <div class="feature">
                     <img src="./img/icon3.png" alt="Icon 3">
                     <div class="feature__text">
-                        <h2>Excepteur sint.</h2>
-                        <p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
+                        <h2>Small billings.</h2>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum.</p>
                         <a href="#">More details &rarr;</a>
                     </div>
                 </div>
                 <div class="feature">
                     <img src="./img/icon4.png" alt="Icon 4">
                     <div class="feature__text">
-                        <h2>Excepteur sint.</h2>
-                        <p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
+                        <h2>Opening locks.</h2>
+                        <p>Scelerisque felis imperdiet proin fermentum leo vel orci porta non.</p>
                         <a href="#">More details &rarr;</a>
                     </div>
                 </div>
                 <div class="feature">
                     <img src="./img/icon5.png" alt="Icon 5">
                     <div class="feature__text">
-                        <h2>Excepteur sint.</h2>
-                        <p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
+                        <h2>Geographic lessons.</h2>
+                        <p>Magna etiam tempor orci eu. At tellus at urna condimentum. </p>
                         <a href="#">More details &rarr;</a>
                     </div>
                 </div>
                 <div class="feature">
                     <img src="./img/icon6.png" alt="Icon 6">
                     <div class="feature__text">
-                        <h2>Excepteur sint.</h2>
-                        <p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
+                        <h2>Parties recording.</h2>
+                        <p>Bibendum est ultricies integer quis. In pellentesque massa placerat duis ultricies.</p>
                         <a href="#">More details &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
-        <secion class="testimonials">
+        <secion class="testimonials section">
             <div class="container">
-                <div class="container__text">
-                    <h2 class="titles">Tesimonials</h2>
-                    <p class="content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu pariatur, Sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <h4 class="author">Author - Name</h4>
+                <div class="container__text slider">
+                    <section class="slide">
+                        <h2 class="titles">Tesimonials</h2>
+                        <p class="content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu pariatur, Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <h4 class="author">John Doe - UX Designer</h4>
+                    </section>
+                    <!-- <section class="slide">
+                        <h2 class="titles">Tesimonials</h2>
+                        <p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et fugiat molestiae ut vitae labore vel deserunt necessitatibus ipsam velit dolor! Amet consectetur adipisicing elit. Et fugiat molestiae ut vitae labore vel deserunt necessitatibus</p>
+                        <h4 class="author">David Bone - Developer</h4>
+                    </section>
+                    <section class="slide">
+                        <h2 class="titles">Tesimonials</h2>
+                        <p class="content">Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu pariatur.</p>
+                        <h4 class="author">Kate Eva - SEO Expert</h4>
+                    </section> -->
                 </div>
-                <div class="circles">
+                <!-- <div class="circles">
                     <div class="circle"></div>
                     <div class="circle"></div>
                     <div class="circle"></div>
-                </div>
+                </div> -->
             </div>
         </secion>
-        <section class="info">
+        <section class="info section">
             <div class="info__container">
                 <div class="photo"></div>
                 <div class="text">
                     <h2>SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE.</h2>
-                    <p>Magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                    <p>Magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
+                    </p>
                     <a href="#">More details &rarr;</a>
                 </div>
             </div>
         </section>
-        <section class="signup">
+        <section class="signup section">
             <div class="signup__container">
                 <h2>TAKE ACTION & BUY YOUR COPY NOW!</h2>
                 <p>Excepteur sint occaecat cupidatat non proiden deserunt mollit anim laborum.</p>
@@ -130,7 +144,8 @@
             </div>
         </footer>
     </div>
-    <script src="./main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="./main.js" type="module"></script>
 </body>
 
 </html>
