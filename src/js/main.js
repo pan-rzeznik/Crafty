@@ -1,6 +1,10 @@
-import jump from './node_modules/jump.js/dist/jump.module.js'
+import jump from 'jump.js'
+import '../scss/main.scss'
 
-const links = document.querySelectorAll('.navbar__list__item');
+const links = document.querySelectorAll('.navbar__list__item','.navbar__logo');
+const logo = document.querySelector('.navbar__logo');
+const navLink = Array.from(links,logo);
+
 const hamburgerToggler = document.getElementById('toggle');
 
 
@@ -15,7 +19,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     features.forEach(feature => {
         TweenMax.from(feature, 1, {scaleY:0, opacity:0, delay: 1})
     });
-})
+}) 
 
 let isScrolling = false;
 

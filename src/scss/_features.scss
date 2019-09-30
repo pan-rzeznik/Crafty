@@ -10,6 +10,13 @@
     grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
     grid-gap: 2rem;
 
+    @media(max-width: 990px) { 
+        max-width: none;
+        padding: 0 1rem;
+        margin: 2.5rem auto;
+    }
+
+
 }
 
 .feature {
@@ -17,6 +24,11 @@
     grid-template-columns: 1fr 3fr;
     padding: 3rem 0;
     transform-origin: top center;
+
+    @media(max-width: 450px) { 
+        grid-template-columns: 1fr 4fr;
+        grid-column-gap: 10px;
+    }
 
     img {
         grid-column: 1/2;
@@ -39,6 +51,14 @@
             font-size: 1.4rem;
             line-height: 1.7;
             padding-right: 6rem;
+
+            @media(max-width: 500px) { 
+                color: $text-grey-light;
+                font-size: 1.4rem;
+                line-height: 1.5;
+                padding-right: 6rem;
+                padding-right: 10px;
+            }
         }
 
         a {
@@ -54,19 +74,4 @@
         }
     }
 
-
-}
-
-@media(max-width: 500px) {
-    .feature {
-        &__text {
-            p {
-                color: $text-grey-light;
-                font-size: 1.4rem;
-                line-height: 1.5;
-                padding-right: 6rem;
-                padding-right: 10px;
-            }
-        }
-    }
 }
