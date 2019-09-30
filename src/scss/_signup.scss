@@ -21,6 +21,11 @@
             font-size: 3.5rem;
             color: $text-grey-dark;
             opacity: 0.8; 
+
+            @media (max-width: 768px) { 
+                font-size: 2.5rem;
+                text-align: center;
+            }
         }
 
         p {
@@ -47,17 +52,6 @@
             }
         }
     }
-}
-
-@media (max-width: 768px) {
-   .signup {
-       &__container {
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-        }
-       }
-   } 
 }
 
 

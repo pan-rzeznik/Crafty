@@ -72,16 +72,8 @@
         input {
             display: none;
         }
-    }
 
-
-
-
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        &__wrapper {
+        @media (max-width: 768px) {
             position: relative;
 
             .navbar__list {
@@ -112,11 +104,6 @@
                 transform: scaleY(1);;
                 opacity: 1;
             }
-
-
-        }
-
+         }
     }
-
-
 }

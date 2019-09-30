@@ -26,7 +26,8 @@ a {
 .page-container {
     display: grid;
     position: relative;
-    grid-template-rows:  60vh repeat(6, min-content) 
+    grid-template-rows:  60vh repeat(6, min-content) ;
+    overflow: hidden;
 }
 
 .active {

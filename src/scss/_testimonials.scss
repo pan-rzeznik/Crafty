@@ -46,7 +46,9 @@
             margin: 5rem 0;
             color: $text-grey-dark;
 
-           
+            @media (max-width: 430px) { 
+                margin: 2rem 0;
+            }
         }
 
         .slider {
